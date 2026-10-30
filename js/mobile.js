@@ -313,57 +313,205 @@ function sendSosMessage(type) {
   }
 }
 
-// ORGANIZACIÓN DE SALAS Y SEDES
+// ORGANIZACIÓN DE SALAS Y SEDES (MULTI-SEDE ESTILO SEMERGEN)
 var allRoomsList = [];
 var venuesMap = {};
+var roomVenueMap = {};
+var hasMultipleVenues = false;
+
+var VENUE_DEFINITIONS = {
+  'palacio': {
+    key: 'palacio',
+    name: 'Palacio de Congresos',
+    shortName: 'Palacio',
+    icon: 'fa-building-columns',
+    order: 1,
+    pillActive: 'bg-teal-800 text-white shadow-sm ring-1 ring-teal-500',
+    pillInactive: 'text-teal-900 bg-teal-50/80 border border-teal-200 hover:bg-teal-100',
+    headerClass: 'bg-teal-900/10 border-teal-300 text-teal-950',
+    headerBadgeClass: 'bg-teal-800 text-white',
+    rowSelected: 'bg-teal-50 border-teal-400 text-teal-950 shadow-sm ring-1 ring-teal-500/20 is-selected venue-palacio',
+    rowUnselected: 'bg-white border-slate-200 text-slate-700 hover:bg-teal-50/30 venue-palacio',
+    iconColor: 'text-teal-600',
+    checkBg: 'bg-teal-600 text-white',
+    roomBadgeClass: 'border-teal-700 bg-teal-950/80 text-teal-300 hover:bg-teal-900/80',
+    roomBadgeIconColor: 'text-teal-400',
+    cardAccentClass: ''
+  },
+  'hotel': {
+    key: 'hotel',
+    name: 'Sede Hotel',
+    shortName: 'Hotel',
+    icon: 'fa-hotel',
+    order: 2,
+    pillActive: 'bg-amber-500 text-slate-950 font-black shadow-sm ring-2 ring-amber-400',
+    pillInactive: 'text-amber-950 bg-amber-100/90 border border-amber-300 hover:bg-amber-200 font-bold',
+    headerClass: 'bg-amber-100/90 border-amber-300 text-amber-950',
+    headerBadgeClass: 'bg-amber-600 text-white',
+    rowSelected: 'bg-amber-100/90 border-amber-500 text-amber-950 shadow-sm ring-1 ring-amber-500/30 is-selected venue-hotel',
+    rowUnselected: 'bg-amber-50/40 border-amber-200 text-amber-950 hover:bg-amber-100/50 venue-hotel',
+    iconColor: 'text-amber-600',
+    checkBg: 'bg-amber-600 text-white',
+    roomBadgeClass: 'border-amber-500 bg-amber-950/90 text-amber-300 hover:bg-amber-900/80',
+    roomBadgeIconColor: 'text-amber-400',
+    cardAccentClass: 'border-l-4 border-l-amber-500'
+  },
+  'eposter': {
+    key: 'eposter',
+    name: 'Exposición y Pósters',
+    shortName: 'Exposición / Pósters',
+    icon: 'fa-tv',
+    order: 3,
+    pillActive: 'bg-emerald-700 text-white font-black shadow-sm ring-2 ring-emerald-400',
+    pillInactive: 'text-emerald-950 bg-emerald-100/90 border border-emerald-300 hover:bg-emerald-200 font-bold',
+    headerClass: 'bg-emerald-100/90 border-emerald-300 text-emerald-950',
+    headerBadgeClass: 'bg-emerald-700 text-white',
+    rowSelected: 'bg-emerald-100/90 border-emerald-500 text-emerald-950 shadow-sm ring-1 ring-emerald-500/30 is-selected venue-eposter',
+    rowUnselected: 'bg-emerald-50/40 border-emerald-200 text-emerald-950 hover:bg-emerald-100/50 venue-eposter',
+    iconColor: 'text-emerald-600',
+    checkBg: 'bg-emerald-600 text-white',
+    roomBadgeClass: 'border-emerald-600 bg-emerald-950/90 text-emerald-300 hover:bg-emerald-900/80',
+    roomBadgeIconColor: 'text-emerald-400',
+    cardAccentClass: 'border-l-4 border-l-emerald-500'
+  },
+  'comites': {
+    key: 'comites',
+    name: 'Salas Técnicas / Comités y Apoyo',
+    shortName: 'Comités y Apoyo',
+    icon: 'fa-sliders',
+    order: 4,
+    pillActive: 'bg-indigo-700 text-white font-black shadow-sm ring-2 ring-indigo-400',
+    pillInactive: 'text-indigo-950 bg-indigo-100/90 border border-indigo-300 hover:bg-indigo-200 font-bold',
+    headerClass: 'bg-indigo-100/90 border-indigo-300 text-indigo-950',
+    headerBadgeClass: 'bg-indigo-700 text-white',
+    rowSelected: 'bg-indigo-100/80 border-indigo-500 text-indigo-950 shadow-sm ring-1 ring-indigo-500/30 is-selected venue-comites',
+    rowUnselected: 'bg-indigo-50/30 border-indigo-200 text-indigo-950 hover:bg-indigo-100/40 venue-comites',
+    iconColor: 'text-indigo-600',
+    checkBg: 'bg-indigo-600 text-white',
+    roomBadgeClass: 'border-indigo-500 bg-indigo-950/90 text-indigo-300 hover:bg-indigo-900/80',
+    roomBadgeIconColor: 'text-indigo-400',
+    cardAccentClass: 'border-l-4 border-l-indigo-500'
+  },
+  'exterior': {
+    key: 'exterior',
+    name: 'Sede Social / Exterior',
+    shortName: 'Sede Exterior',
+    icon: 'fa-champagne-glasses',
+    order: 5,
+    pillActive: 'bg-purple-700 text-white font-black shadow-sm ring-2 ring-purple-400',
+    pillInactive: 'text-purple-950 bg-purple-100/90 border border-purple-300 hover:bg-purple-200 font-bold',
+    headerClass: 'bg-purple-100/90 border-purple-300 text-purple-950',
+    headerBadgeClass: 'bg-purple-700 text-white',
+    rowSelected: 'bg-purple-100/90 border-purple-500 text-purple-950 shadow-sm ring-1 ring-purple-500/30 is-selected venue-exterior',
+    rowUnselected: 'bg-purple-50/40 border-purple-200 text-purple-950 hover:bg-purple-100/50 venue-exterior',
+    iconColor: 'text-purple-600',
+    checkBg: 'bg-purple-600 text-white',
+    roomBadgeClass: 'border-purple-500 bg-purple-950/90 text-purple-300 hover:bg-purple-900/80',
+    roomBadgeIconColor: 'text-purple-400',
+    cardAccentClass: 'border-l-4 border-l-purple-500'
+  }
+};
+
+function detectVenueForRoom(roomName, customRoomVenues) {
+  var r = (roomName || '').trim();
+  if (customRoomVenues && customRoomVenues[r]) {
+    var mapped = String(customRoomVenues[r]).trim().toLowerCase();
+    if (VENUE_DEFINITIONS[mapped]) return mapped;
+    if (mapped.includes('hotel')) return 'hotel';
+    if (mapped.includes('poster') || mapped.includes('póster') || mapped.includes('exposici')) return 'eposter';
+    if (mapped.includes('exterior') || mapped.includes('social')) return 'exterior';
+    if (mapped.includes('comit') || mapped.includes('apoyo') || mapped.includes('técnic') || mapped.includes('tecnic')) return 'comites';
+  }
+  var lower = r.toLowerCase();
+  if (lower.includes('hotel') || lower.includes('saray') || lower.includes('puerta del camino') || lower.includes('parador') || lower.includes('nh ') || lower.includes('meliá') || lower.includes('melia') || lower.includes('eurostars')) {
+    return 'hotel';
+  }
+  if (lower.includes('poster') || lower.includes('póster') || lower.includes('exposición') || lower.includes('exposicion') || lower.includes('exhibit') || lower.includes('feria')) {
+    return 'eposter';
+  }
+  if (lower.includes('exterior') || lower.includes('sede social') || lower.includes('mártires') || lower.includes('martires') || lower.includes('córdova') || lower.includes('cordova') || lower.includes('cena') || lower.includes('muelle')) {
+    return 'exterior';
+  }
+  if (lower.includes('speaker ready') || lower.includes('andalucía i (') || lower.includes('andalucia i (') || lower.includes('registro') || lower.includes('registration') || lower.includes('hall principal') || lower.includes('almacén') || lower.includes('almacen') || lower.includes('oración') || lower.includes('oracion') || lower.includes('prayer') || lower.includes('sala u1') || lower.includes('salas z2') || lower.includes('z2 & z4') || lower.includes('comité') || lower.includes('comite') || lower.includes('vip')) {
+    return 'comites';
+  }
+  return 'palacio';
+}
+
+function getVenueDef(venueKey) {
+  return VENUE_DEFINITIONS[venueKey] || VENUE_DEFINITIONS['palacio'];
+}
+
+function getRoomVenueKey(roomName) {
+  var r = (roomName || '').trim();
+  return roomVenueMap[r] || detectVenueForRoom(r, (eventData && eventData.schedule && eventData.schedule.room_venues) || null);
+}
 
 function setupRoomsAndVenues() {
   var schedule = eventData.schedule || { rooms: [], days: [] };
   var rawRooms = schedule.rooms || [];
+  var customRoomVenues = schedule.room_venues || {};
 
   // También recopilar salas de las sesiones por si no estuvieran en schedule.rooms
   var foundRooms = new Set();
+  rawRooms.forEach(function(r) { if (r && r.trim()) foundRooms.add(r.trim()); });
   (schedule.days || []).forEach(function(d) {
     (d.sessions || []).forEach(function(s) {
-      if (s.room) foundRooms.add(s.room.trim());
+      if (s.room && s.room.trim()) foundRooms.add(s.room.trim());
     });
   });
-  rawRooms.forEach(function(r) { foundRooms.add(r.trim()); });
 
-  allRoomsList = Array.from(foundRooms);
-  if (allRoomsList.length === 0) {
-    allRoomsList = ['Auditorio Principal', 'Sala A', 'Sala B'];
+  var rawList = Array.from(foundRooms);
+  if (rawList.length === 0) {
+    rawList = ['Auditorio Principal', 'Sala A', 'Sala B'];
   }
 
-  // Categorizar salas por sede o tipología automáticamente
+  roomVenueMap = {};
+  var detectedHotelName = '';
+  rawList.forEach(function(r) {
+    var vKey = detectVenueForRoom(r, customRoomVenues);
+    roomVenueMap[r] = vKey;
+    if (vKey === 'hotel' && !detectedHotelName) {
+      var mHotel = r.match(/(Hotel\s+[A-Za-zÁÉÍÓÚÑáéíóúñ0-9\s]+?)(?:\s*[-–—(]|$)/i);
+      if (mHotel && mHotel[1]) {
+        detectedHotelName = mHotel[1].trim();
+      }
+    }
+  });
+
+  if (detectedHotelName) {
+    VENUE_DEFINITIONS['hotel'].name = detectedHotelName;
+    VENUE_DEFINITIONS['hotel'].shortName = detectedHotelName;
+  }
+
+  // Ordenar allRoomsList agrupando por orden de sede y luego alfabéticamente
+  allRoomsList = rawList.slice().sort(function(a, b) {
+    var va = getVenueDef(roomVenueMap[a] || 'palacio').order;
+    var vb = getVenueDef(roomVenueMap[b] || 'palacio').order;
+    if (va !== vb) return va - vb;
+    return a.localeCompare(b, 'es');
+  });
+
   venuesMap = {
-    'all': { name: 'Todas', rooms: [...allRoomsList] }
+    'all': { key: 'all', name: 'Todas las Sedes', shortName: 'Todas', icon: 'fa-layer-group', rooms: [...allRoomsList] }
   };
 
-  allRoomsList.forEach(function(room) {
-    var lower = room.toLowerCase();
-    var venueKey = 'sede_principal';
-    var venueName = 'Palacio / Principal';
-
-    if (lower.includes('hotel')) {
-      venueKey = 'hotel';
-      venueName = 'Hotel';
-    } else if (lower.includes('poster') || lower.includes('póster') || lower.includes('exhibit')) {
-      venueKey = 'posters';
-      venueName = 'e-Póster / Zona Exposición';
-    } else if (lower.includes('auditorio') || lower.includes('plenaria')) {
-      venueKey = 'auditorio';
-      venueName = 'Auditorios';
-    } else if (lower.includes('taller') || lower.includes('workshop')) {
-      venueKey = 'talleres';
-      venueName = 'Talleres';
+  var orderedVenueKeys = ['palacio', 'hotel', 'eposter', 'comites', 'exterior'];
+  orderedVenueKeys.forEach(function(vKey) {
+    var roomsForVenue = allRoomsList.filter(function(r) { return roomVenueMap[r] === vKey; });
+    if (roomsForVenue.length > 0) {
+      var def = getVenueDef(vKey);
+      venuesMap[vKey] = {
+        key: vKey,
+        name: def.name,
+        shortName: def.shortName,
+        icon: def.icon,
+        rooms: roomsForVenue
+      };
     }
-
-    if (!venuesMap[venueKey]) {
-      venuesMap[venueKey] = { name: venueName, rooms: [] };
-    }
-    venuesMap[venueKey].rooms.push(room);
   });
+
+  hasMultipleVenues = (Object.keys(venuesMap).length > 2);
 
   // Cargar salas seleccionadas previas aisladas por evento y validadas estrictamente
   var savedRooms = safeGet(getEventStorageKey('selected_rooms_v1'), null);
@@ -374,7 +522,6 @@ function setupRoomsAndVenues() {
   if (validSavedRooms.length > 0) {
     selectedRooms = validSavedRooms;
   } else {
-    // Por defecto todas las salas de este congreso seleccionadas
     selectedRooms = [...allRoomsList];
   }
 }
@@ -520,33 +667,71 @@ function selectDayByIndex(idx) {
   renderSchedule();
 }
 
-// BOTONES DE SEDES (SOLO SI HAY MÚLTIPLES)
-function renderVenueButtons() {
-  var container = document.getElementById('venues-buttons-container');
-  if (!container) return;
-
+// BOTONES DE SEDES (MULTI-SEDE ESTILO SEMERGEN)
+function buildVenuePillsHtml(isCompactBar) {
   var keys = Object.keys(venuesMap);
-  if (keys.length <= 1) {
-    container.innerHTML = '';
-    container.classList.add('hidden');
-    return;
-  }
-  container.classList.remove('hidden');
+  if (keys.length <= 2) return '';
 
-  var html = '<div class="flex flex-wrap items-center gap-1.5 p-1 bg-slate-100 rounded-xl text-xs w-full mb-1">';
+  var html = '<div class="flex flex-wrap items-center gap-1.5 p-1.5 bg-slate-100 border border-slate-200 rounded-xl text-xs w-full">' +
+    '<span class="text-[10px] font-black uppercase text-slate-600 px-1.5 flex items-center gap-1">' +
+      '<i class="fa-solid fa-map-location-dot text-teal-700"></i> Sedes:' +
+    '</span>';
+
   keys.forEach(function(key) {
     var v = venuesMap[key];
     var isActive = (currentVenue === key);
     var count = v.rooms.length;
 
+    var btnStyle = '';
+    var iconHtml = '';
+    if (key === 'all') {
+      btnStyle = isActive
+        ? 'bg-slate-900 text-amber-300 shadow-sm font-black ring-1 ring-slate-700'
+        : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 font-bold';
+      iconHtml = '<i class="fa-solid fa-layer-group text-[10px]"></i>';
+    } else {
+      var def = getVenueDef(key);
+      btnStyle = isActive ? def.pillActive : def.pillInactive;
+      iconHtml = '<i class="fa-solid ' + def.icon + ' text-[10px]"></i>';
+    }
+
+    var labelText = isCompactBar ? (v.shortName || v.name) : v.name;
     html += '<button onclick="filterByVenue(\'' + key + '\')" ' +
-      'class="px-2.5 py-1 rounded-lg font-bold transition cursor-pointer text-xs ' +
-      (isActive ? 'bg-teal-800 text-white shadow-sm' : 'text-slate-600 hover:bg-white/80') + '">' +
-      escapeHtml(v.name) + ' (' + count + ')' +
+      'class="px-2.5 py-1 rounded-lg transition cursor-pointer text-[11px] inline-flex items-center gap-1.5 active:scale-95 ' + btnStyle + '">' +
+      iconHtml +
+      '<span>' + escapeHtml(labelText) + ' (' + count + ')</span>' +
     '</button>';
   });
+
   html += '</div>';
-  container.innerHTML = html;
+  return html;
+}
+
+function renderVenueButtons() {
+  var container = document.getElementById('venues-buttons-container');
+  var mainMobileBar = document.getElementById('main-venues-bar');
+  var keys = Object.keys(venuesMap);
+
+  if (keys.length <= 2) {
+    if (container) {
+      container.innerHTML = '';
+      container.classList.add('hidden');
+    }
+    if (mainMobileBar) {
+      mainMobileBar.innerHTML = '';
+      mainMobileBar.classList.add('hidden');
+    }
+    return;
+  }
+
+  if (container) {
+    container.classList.remove('hidden');
+    container.innerHTML = buildVenuePillsHtml(false);
+  }
+  if (mainMobileBar) {
+    mainMobileBar.classList.remove('hidden');
+    mainMobileBar.innerHTML = buildVenuePillsHtml(true);
+  }
 }
 
 function filterByVenue(venueKey) {
@@ -560,6 +745,12 @@ function filterByVenue(venueKey) {
   renderVenueButtons();
   renderRoomCards();
   renderSchedule();
+  if (venueKey === 'all') {
+    showToast('Mostrando todas las sedes (' + allRoomsList.length + ' salas)', 'fa-layer-group text-teal-400');
+  } else if (venuesMap[venueKey]) {
+    var def = getVenueDef(venueKey);
+    showToast('Sede seleccionada: ' + venuesMap[venueKey].name + ' (' + selectedRooms.length + ' salas)', def.icon + ' text-amber-400');
+  }
 }
 
 // GESTIÓN DE CHECKLIST DE MONTAJE TÉCNICO AV POR SALA
@@ -723,63 +914,105 @@ function deleteChecklistItem(itemId) {
   renderChecklistModalContent();
 }
 
-// SELECTOR ÚNICO Y LIMPIO DE SALAS EN LÍNEA (NO EN CAJAS, APROVECHANDO EL ESPACIO VERTICAL)
+// SELECTOR DE SALAS CON AGRUPACIÓN AUTOMÁTICA POR SEDES (ESTILO SEMERGEN)
+function buildSingleRoomRowHtml(room) {
+  var isSelected = selectedRooms.includes(room);
+  var isOnlyThis = (selectedRooms.length === 1 && selectedRooms[0] === room);
+  var chk = getRoomChecklist(room);
+  var items = chk.items || [];
+  var checkedCount = items.filter(function(it) { return it.checked; }).length;
+  var isChkDone = (items.length > 0 && checkedCount === items.length);
+
+  var vKey = getRoomVenueKey(room);
+  var vDef = getVenueDef(vKey);
+  var rowStyle = isSelected ? vDef.rowSelected : vDef.rowUnselected;
+  var roomIcon = hasMultipleVenues ? vDef.icon : (isSelected ? 'fa-door-open' : 'fa-door-closed');
+  var roomIconColor = isSelected ? vDef.iconColor : 'text-slate-400';
+
+  return '<div class="room-row-item flex items-center justify-between p-2 sm:p-2.5 rounded-xl border transition cursor-pointer select-none gap-2 ' + rowStyle + '" ' +
+    'onclick="toggleRoomSelection(\'' + escapeJsString(room) + '\')">' +
+    
+    // Lado izquierdo: Icono de sede/sala y Nombre Completo
+    '<div class="flex items-center gap-2 min-w-0 flex-1">' +
+      '<i class="fa-solid ' + roomIcon + ' ' + roomIconColor + ' text-sm shrink-0"></i>' +
+      '<span class="text-xs sm:text-sm font-bold text-slate-900 room-title truncate leading-tight ' + (isSelected ? 'font-black' : '') + '">' +
+        escapeHtml(room) +
+      '</span>' +
+    '</div>' +
+
+    // Lado derecho: Acciones compactas en línea (Checklist + Solo + Checkbox)
+    '<div class="flex items-center gap-1.5 shrink-0">' +
+      // Botón Checklist compacto
+      '<button onclick="openRoomChecklistModal(\'' + escapeJsString(room) + '\'); event.stopPropagation();" class="inline-flex items-center gap-1 font-bold text-[10.5px] px-2 py-1 rounded-lg border transition cursor-pointer ' +
+        (isChkDone 
+          ? 'bg-emerald-100 text-emerald-900 border-emerald-300 hover:bg-emerald-200' 
+          : 'bg-amber-100 text-amber-900 border-amber-300 hover:bg-amber-200') + '" title="Checklist Equipamiento AV">' +
+        '<i class="fa-solid ' + (isChkDone ? 'fa-circle-check text-emerald-600' : 'fa-clock text-amber-600') + ' text-[10px]"></i>' +
+        '<span>' + (isChkDone ? 'Montaje OK' : 'Checklist (' + checkedCount + '/' + items.length + ')') + '</span>' +
+      '</button>' +
+
+      // Botón Solo / Mi Sala
+      '<button onclick="selectSingleRoom(\'' + escapeJsString(room) + '\'); event.stopPropagation();" title="Ver únicamente esta sala" ' +
+        'class="text-[10.5px] font-black uppercase px-2 py-1 rounded-lg transition cursor-pointer ' +
+        (isOnlyThis 
+          ? 'bg-amber-400 text-slate-950 shadow-sm ring-1 ring-amber-500 font-black' 
+          : 'bg-slate-100 hover:bg-teal-600 hover:text-white text-slate-600 border border-slate-200') + '">' +
+        (isOnlyThis ? '★ Mi Sala' : 'Solo') +
+      '</button>' +
+
+      // Checkbox visual de selección
+      '<div class="w-5 h-5 rounded-md flex items-center justify-center transition ' + 
+        (isSelected ? (vDef.checkBg + ' shadow-sm') : 'border border-slate-300 bg-white') + '">' +
+        (isSelected ? '<i class="fa-solid fa-check text-[10px]"></i>' : '') +
+      '</div>' +
+    '</div>' +
+
+  '</div>';
+}
+
 function renderRoomCards() {
   var container = document.getElementById('rooms-grid');
   if (!container) return;
 
   var html = '';
-  allRoomsList.forEach(function(room) {
-    var isSelected = selectedRooms.includes(room);
-    var isOnlyThis = (selectedRooms.length === 1 && selectedRooms[0] === room);
-    var chk = getRoomChecklist(room);
-    var items = chk.items || [];
-    var checkedCount = items.filter(function(it) { return it.checked; }).length;
-    var isChkDone = (items.length > 0 && checkedCount === items.length);
 
-    html += '<div class="room-row-item flex items-center justify-between p-2 sm:p-2.5 rounded-xl border transition cursor-pointer select-none gap-2 ' +
-      (isSelected 
-        ? 'bg-teal-50 border-teal-400 text-teal-950 shadow-sm ring-1 ring-teal-500/20 is-selected' 
-        : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50') + '" ' +
-      'onclick="toggleRoomSelection(\'' + escapeJsString(room) + '\')">' +
-      
-      // Lado izquierdo: Icono de sala y Nombre Completo sin cortar
-      '<div class="flex items-center gap-2 min-w-0 flex-1">' +
-        '<i class="fa-solid ' + (isSelected ? 'fa-door-open text-teal-600' : 'fa-door-closed text-slate-400') + ' text-sm shrink-0"></i>' +
-        '<span class="text-xs sm:text-sm font-bold text-slate-900 room-title truncate leading-tight ' + (isSelected ? 'font-black text-teal-950' : '') + '">' +
-          escapeHtml(room) +
-        '</span>' +
-      '</div>' +
+  if (hasMultipleVenues) {
+    var venueKeys = Object.keys(venuesMap).filter(function(k) { return k !== 'all'; });
+    venueKeys.forEach(function(vKey, vIdx) {
+      var vGroup = venuesMap[vKey];
+      var vDef = getVenueDef(vKey);
+      var groupRooms = vGroup.rooms || [];
+      if (groupRooms.length === 0) return;
 
-      // Lado derecho: Acciones compactas en línea (Checklist + Solo + Checkbox)
-      '<div class="flex items-center gap-1.5 shrink-0">' +
-        // Botón Checklist compacto
-        '<button onclick="openRoomChecklistModal(\'' + escapeJsString(room) + '\'); event.stopPropagation();" class="inline-flex items-center gap-1 font-bold text-[10.5px] px-2 py-1 rounded-lg border transition cursor-pointer ' +
-          (isChkDone 
-            ? 'bg-emerald-100 text-emerald-900 border-emerald-300 hover:bg-emerald-200' 
-            : 'bg-amber-100 text-amber-900 border-amber-300 hover:bg-amber-200') + '" title="Checklist Equipamiento AV">' +
-          '<i class="fa-solid ' + (isChkDone ? 'fa-circle-check text-emerald-600' : 'fa-clock text-amber-600') + ' text-[10px]"></i>' +
-          '<span>' + (isChkDone ? 'Montaje OK' : 'Checklist (' + checkedCount + '/' + items.length + ')') + '</span>' +
-        '</button>' +
+      var selectedInGroup = groupRooms.filter(function(r) { return selectedRooms.includes(r); }).length;
+      var isOnlyThisVenue = (selectedInGroup === groupRooms.length && selectedRooms.length === groupRooms.length);
 
-        // Botón Solo / Mi Sala
-        '<button onclick="selectSingleRoom(\'' + escapeJsString(room) + '\'); event.stopPropagation();" title="Ver únicamente esta sala" ' +
-          'class="text-[10.5px] font-black uppercase px-2 py-1 rounded-lg transition cursor-pointer ' +
-          (isOnlyThis 
-            ? 'bg-amber-400 text-slate-950 shadow-sm ring-1 ring-amber-500 font-black' 
-            : 'bg-slate-100 hover:bg-teal-600 hover:text-white text-slate-600 border border-slate-200') + '">' +
-          (isOnlyThis ? '★ Mi Sala' : 'Solo') +
-        '</button>' +
-
-        // Checkbox visual de selección
-        '<div class="w-5 h-5 rounded-md flex items-center justify-center transition ' + 
-          (isSelected ? 'bg-teal-600 text-white shadow-sm' : 'border border-slate-300 bg-white') + '">' +
-          (isSelected ? '<i class="fa-solid fa-check text-[10px]"></i>' : '') +
+      html += '<div class="col-span-full venue-group-header flex items-center justify-between px-2.5 py-1.5 rounded-xl border ' + vDef.headerClass + (vIdx > 0 ? ' mt-2' : '') + '">' +
+        '<div class="flex items-center gap-2 min-w-0">' +
+          '<span class="w-5 h-5 rounded-lg flex items-center justify-center text-[11px] shrink-0 ' + vDef.headerBadgeClass + '">' +
+            '<i class="fa-solid ' + vDef.icon + '"></i>' +
+          '</span>' +
+          '<span class="text-[11px] font-black uppercase tracking-wide truncate">' +
+            escapeHtml(vGroup.name) + ' (' + groupRooms.length + (groupRooms.length === 1 ? ' sala' : ' salas') + ')' +
+          '</span>' +
         '</div>' +
-      '</div>' +
+        '<button onclick="filterByVenue(\'' + vKey + '\')" class="text-[10px] font-black px-2 py-0.5 rounded-lg border transition cursor-pointer shrink-0 ' +
+          (isOnlyThisVenue
+            ? 'bg-slate-900 text-amber-300 border-slate-800 shadow-xs'
+            : 'bg-white/90 hover:bg-white text-slate-800 border-slate-300 shadow-2xs') + '">' +
+          (isOnlyThisVenue ? '✓ Sede Activa' : 'Solo esta sede') +
+        '</button>' +
+      '</div>';
 
-    '</div>';
-  });
+      groupRooms.forEach(function(room) {
+        html += buildSingleRoomRowHtml(room);
+      });
+    });
+  } else {
+    allRoomsList.forEach(function(room) {
+      html += buildSingleRoomRowHtml(room);
+    });
+  }
 
   container.innerHTML = html;
   updateBadges();
@@ -789,20 +1022,40 @@ function renderRoomCards() {
 function renderQuickTechButtons() { renderRoomCards(); }
 function renderRoomCheckboxes() { renderRoomCards(); }
 
+function syncCurrentVenueFromSelection() {
+  if (selectedRooms.length === allRoomsList.length) {
+    currentVenue = 'all';
+    return;
+  }
+  var foundMatch = '';
+  Object.keys(venuesMap).forEach(function(k) {
+    if (k === 'all') return;
+    var rList = venuesMap[k].rooms || [];
+    if (rList.length > 0 && rList.length === selectedRooms.length && rList.every(function(r) { return selectedRooms.includes(r); })) {
+      foundMatch = k;
+    }
+  });
+  currentVenue = foundMatch || '';
+}
+
 function toggleRoomSelection(room) {
   if (selectedRooms.includes(room)) {
     selectedRooms = selectedRooms.filter(function(r) { return r !== room; });
   } else {
     selectedRooms.push(room);
   }
+  syncCurrentVenueFromSelection();
   safeSet(getEventStorageKey('selected_rooms_v1'), selectedRooms);
+  renderVenueButtons();
   renderRoomCards();
   renderSchedule();
 }
 
 function selectSingleRoom(roomName) {
   selectedRooms = [roomName];
+  syncCurrentVenueFromSelection();
   safeSet(getEventStorageKey('selected_rooms_v1'), selectedRooms);
+  renderVenueButtons();
   renderRoomCards();
   renderSchedule();
   showToast('Modo exclusivo: ' + roomName, 'fa-door-open text-teal-400');
@@ -810,7 +1063,9 @@ function selectSingleRoom(roomName) {
 
 function selectAllRooms(state) {
   selectedRooms = state ? [...allRoomsList] : [];
+  currentVenue = state ? 'all' : '';
   safeSet(getEventStorageKey('selected_rooms_v1'), selectedRooms);
+  renderVenueButtons();
   renderRoomCards();
   renderSchedule();
   showToast(state ? 'Mostrando todas las salas' : 'Filtro limpiado (0 salas)', 'fa-layer-group text-teal-400');
@@ -1440,9 +1695,12 @@ function renderCardListView(output, sessions, currentDay) {
 
       var hasPeopleOrTalks = (speakerNames.length > 0 || modNames.length > 0 || subtalks.length > 0);
       var sessionTime = (s.time_start && s.time_end) ? (s.time_start + ' - ' + s.time_end) : '';
+      var vKey = getRoomVenueKey(s.room || '');
+      var vDef = getVenueDef(vKey);
 
       html += '<div id="session-card-' + s.id + '" class="session-card p-3 rounded-xl border transition flex flex-col justify-between ' + 
-        (isFinished ? 'bg-emerald-950/20 border-emerald-500/50 shadow-sm' : 'bg-slate-900 border-slate-800 shadow-sm') + '">' +
+        (isFinished ? 'bg-emerald-950/20 border-emerald-500/50 shadow-sm ' : 'bg-slate-900 border-slate-800 shadow-sm ') +
+        (hasMultipleVenues ? vDef.cardAccentClass : '') + '">' +
         '<div>' +
           '<div class="flex items-center justify-between gap-1 mb-1.5 flex-wrap">' +
             '<div class="flex items-center gap-1 flex-wrap">' +
@@ -1459,8 +1717,8 @@ function renderCardListView(output, sessions, currentDay) {
               (isFinished ? '<span class="text-[8.5px] font-black px-1.5 py-0.5 rounded uppercase bg-emerald-600 text-white shadow-sm flex items-center gap-0.5"><i class="fa-solid fa-check"></i>Terminada</span>' : '') +
               '<span id="live-tag-' + s.id + '" class="text-[8.5px] font-black px-1.5 py-0.5 rounded uppercase hidden bg-rose-600 text-white animate-pulse">EN VIVO AHORA</span>' +
             '</div>' +
-            '<button onclick="selectSingleRoom(\'' + escapeJsString(s.room || 'Sala') + '\')" title="Clic para filtrar solo esta sala" class="room-badge text-[10px] font-black px-2 py-0.5 rounded cursor-pointer transition border border-teal-800 bg-teal-950/60 text-teal-300 hover:bg-teal-900/60 whitespace-normal text-left inline-flex items-center gap-1 leading-tight">' +
-              '<i class="fa-solid fa-location-dot text-teal-400 shrink-0"></i>' +
+            '<button onclick="selectSingleRoom(\'' + escapeJsString(s.room || 'Sala') + '\')" title="Clic para filtrar solo esta sala (' + escapeHtml(vDef.name) + ')" class="room-badge text-[10px] font-black px-2 py-0.5 rounded cursor-pointer transition border ' + vDef.roomBadgeClass + ' whitespace-normal text-left inline-flex items-center gap-1 leading-tight">' +
+              '<i class="fa-solid ' + (hasMultipleVenues ? vDef.icon : 'fa-location-dot') + ' ' + vDef.roomBadgeIconColor + ' shrink-0"></i>' +
               '<span>' + escapeHtml(formatRoomName(s.room)) + '</span>' +
             '</button>' +
           '</div>' +
@@ -1468,6 +1726,11 @@ function renderCardListView(output, sessions, currentDay) {
             escapeHtml(s.title) +
           '</h3>' +
           (!isCompactView && s.details ? '<p class="text-[10px] text-slate-400 mt-1 leading-normal">' + escapeHtml(s.details) + '</p>' : '') +
+          (!isCompactView && (s.room_operational_window || s.tech_requirements) ?
+            '<div class="mt-1.5 p-1.5 rounded-lg bg-slate-800/70 border border-slate-700/70 text-[9.5px] text-slate-300 space-y-0.5">' +
+              (s.room_operational_window ? '<div><i class="fa-solid fa-door-open text-amber-400 mr-1"></i><strong class="text-amber-300">Apertura Sala:</strong> ' + escapeHtml(s.room_operational_window) + ' hs</div>' : '') +
+              (s.tech_requirements ? '<div class="line-clamp-2" title="' + escapeHtml(s.tech_requirements) + '"><i class="fa-solid fa-sliders text-teal-400 mr-1"></i><strong class="text-teal-300">Dotación AV:</strong> ' + escapeHtml(s.tech_requirements) + '</div>' : '') +
+            '</div>' : '') +
           
           // Nota técnica incrustada si existe (modo oscuro low-lumen)
           (hasNote ? 
@@ -1598,11 +1861,14 @@ function renderGridView(output, sessions, currentDay) {
       if (sp) speakerNames.push(sp);
     });
     speakerNames = Array.from(new Set(speakerNames));
+    var vKey = getRoomVenueKey(s.room || '');
+    var vDef = getVenueDef(vKey);
 
     html += '<div onclick="openSessionDetailModal(\'' + s.id + '\')" class="grid-row-item p-2.5 rounded-xl border transition flex items-center justify-between gap-2 cursor-pointer ' +
       (isFinished 
-        ? 'bg-emerald-950/20 border-emerald-500/40 hover:bg-emerald-950/30' 
-        : 'bg-slate-900 border-slate-800 hover:bg-slate-800/60 active:bg-slate-800') + '">' +
+        ? 'bg-emerald-950/20 border-emerald-500/40 hover:bg-emerald-950/30 ' 
+        : 'bg-slate-900 border-slate-800 hover:bg-slate-800/60 active:bg-slate-800 ') +
+      (hasMultipleVenues ? vDef.cardAccentClass : '') + '">' +
 
       // Columna 1: Horario
       '<div class="shrink-0">' +
@@ -1617,8 +1883,8 @@ function renderGridView(output, sessions, currentDay) {
         '<div class="font-bold text-slate-100 text-xs truncate leading-snug">' + escapeHtml(s.title) + '</div>' +
         '<div class="flex items-center gap-1.5 text-[9.5px] text-slate-400 mt-1 flex-wrap">' +
           (!isSingleRoom ? 
-            '<span onclick="event.stopPropagation(); selectSingleRoom(\'' + escapeJsString(s.room || 'Sala') + '\')" title="Toca para filtrar solo esta sala" class="room-badge inline-flex items-center gap-1 text-[9px] font-black px-2 py-0.5 rounded border border-teal-700 bg-teal-950 text-teal-300 shrink-0 tracking-wide cursor-pointer hover:bg-teal-900 transition shadow-xs whitespace-normal">' +
-              '<i class="fa-solid fa-location-dot text-amber-400 text-[8.5px] shrink-0"></i>' +
+            '<span onclick="event.stopPropagation(); selectSingleRoom(\'' + escapeJsString(s.room || 'Sala') + '\')" title="Toca para filtrar solo esta sala (' + escapeHtml(vDef.name) + ')" class="room-badge inline-flex items-center gap-1 text-[9px] font-black px-2 py-0.5 rounded border ' + vDef.roomBadgeClass + ' shrink-0 tracking-wide cursor-pointer transition shadow-xs whitespace-normal">' +
+              '<i class="fa-solid ' + (hasMultipleVenues ? vDef.icon : 'fa-location-dot') + ' ' + vDef.roomBadgeIconColor + ' text-[8.5px] shrink-0"></i>' +
               '<span>' + escapeHtml(formatRoomName(s.room)) + '</span>' +
             '</span>' : '') +
           (subtalks.length > 0 ? 
@@ -1678,18 +1944,26 @@ function openSessionDetailModal(sessionId) {
   var noteBtn = document.getElementById('detail-modal-note-btn');
   var finishBtn = document.getElementById('detail-modal-finish-btn');
 
-  // Horario, Tipo, Sala
+  // Horario, Tipo, Sala + Sede
   if (timeEl) timeEl.textContent = (sessionObj.time_start || '') + ' - ' + (sessionObj.time_end || '') + ' hs';
   if (typeEl) {
     typeEl.className = 'text-[9px] font-black px-1.5 py-0.5 rounded uppercase ' + getTypeBadgeClass(sessionObj.title, sessionObj.type);
     typeEl.textContent = getTypeBadgeLabel(sessionObj.title, sessionObj.type);
   }
-  if (roomEl) roomEl.textContent = sessionObj.room || 'Sala General';
+  if (roomEl) {
+    var vKeyModal = getRoomVenueKey(sessionObj.room || '');
+    var vDefModal = getVenueDef(vKeyModal);
+    roomEl.textContent = (sessionObj.room || 'Sala General') + (hasMultipleVenues ? ' • ' + vDefModal.name : '');
+  }
   if (titleEl) titleEl.textContent = sessionObj.title || 'Sesión';
 
   if (detailsEl) {
-    if (sessionObj.details) {
-      detailsEl.textContent = sessionObj.details;
+    var extraLines = [];
+    if (sessionObj.details) extraLines.push(sessionObj.details);
+    if (sessionObj.room_operational_window) extraLines.push('🚪 Horario Apertura Sala: ' + sessionObj.room_operational_window + ' hs');
+    if (sessionObj.tech_requirements) extraLines.push('🎛️ Dotación AV Sala: ' + sessionObj.tech_requirements);
+    if (extraLines.length > 0) {
+      detailsEl.textContent = extraLines.join(' | ');
       detailsEl.classList.remove('hidden');
     } else {
       detailsEl.classList.add('hidden');

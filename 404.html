@@ -206,8 +206,28 @@
       background-color: #042f2e !important;
       border-color: #14b8a6 !important;
     }
+    body.dark-mode .room-row-item.venue-hotel.is-selected {
+      background-color: #451a03 !important;
+      border-color: #f59e0b !important;
+    }
+    body.dark-mode .room-row-item.venue-eposter.is-selected {
+      background-color: #064e3b !important;
+      border-color: #10b981 !important;
+    }
+    body.dark-mode .room-row-item.venue-comites.is-selected {
+      background-color: #1e1b4b !important;
+      border-color: #6366f1 !important;
+    }
+    body.dark-mode .room-row-item.venue-exterior.is-selected {
+      background-color: #3b0764 !important;
+      border-color: #a855f7 !important;
+    }
     body.dark-mode .room-row-item .room-title {
       color: #f8fafc !important;
+    }
+    body.dark-mode .venue-group-header {
+      background-color: #0f172a !important;
+      border-color: #334155 !important;
     }
 
     /* Indicador EN VIVO */
@@ -289,6 +309,9 @@
         <!-- Generado dinámicamente con JS -->
       </div>
     </section>
+
+    <!-- SELECTOR RÁPIDO DE SEDES EN PANTALLA PRINCIPAL (VISIBLE EN MÓVIL CUANDO HAY VARIAS SEDES) -->
+    <div id="main-venues-bar" class="mb-3 md:hidden empty:hidden"></div>
 
     <!-- PANEL DE FILTROS: SEDES, BUSCADOR Y SELECCIÓN RÁPIDA "SOLO MI SALA" -->
     <section id="filter-drawer" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden md:static md:bg-transparent md:z-auto md:block transition-opacity flex flex-col justify-end md:justify-start">
@@ -877,7 +900,7 @@
   </div>
 
   <!-- SCRIPTS AUTÓNOMOS CON BUST DE CACHÉ PARA SMARTPHONES -->
-  <script src="data/event_data.js?v=20261030_144152"></script>
-  <script src="js/mobile.js?v=20261030_144152"></script>
+  <script src="data/event_data.js?v=20261030_165423"></script>
+  <script src="js/mobile.js?v=20261030_165423"></script>
 </body>
 </html>

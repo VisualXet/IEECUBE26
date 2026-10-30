@@ -5,7 +5,7 @@
     "name": "Congreso IEEE CUBE 2026",
     "logo": "./eventos_guardados/IEECUBE26/uploads/Clipboard_10-30-2026_01.jpg",
     "created_at": "2026-10-30T12:33:18.127724",
-    "updated_at": "2026-10-30T14:41:42.530548",
+    "updated_at": "2026-10-30T16:51:58.350755",
     "dates": {
       "start": "2026-11-05",
       "end": "2026-11-14"
@@ -30,9 +30,9 @@
     "branch": "main",
     "html_url": "https://github.com/VisualXet/IEECUBE26",
     "pages_url": "https://visualxet.github.io/IEECUBE26/",
-    "last_commit_sha": "",
-    "last_synced_at": "",
-    "has_unpushed_changes": true,
+    "last_commit_sha": "cab80dfacad724ed4caf77eeb7ab4a55ff5d767f",
+    "last_synced_at": "2026-10-30T14:42:08.709778",
+    "has_unpushed_changes": false,
     "target_folder": ""
   },
   "theme": {
@@ -73,23 +73,25 @@
   "schedule": {
     "rooms": [
       "Albéniz & Machuca",
-      "Andalucía I (Speaker Ready Room)",
       "Andalucía II & III",
       "Federico García Lorca",
-      "Hall Principal / Registro",
-      "Hotel Saray - Sala 1",
       "Machado",
       "Manuel de Falla",
       "Palacio de Congresos (General / Montaje)",
       "Picasso",
-      "Poster Area (Exposición)",
-      "Sala U1",
       "Sala Z1",
-      "Salas Z2 & Z4",
-      "Sede Social / Exterior (Granada)",
-      "Seminarios 1+2 (Sala Oración)",
       "Seminarios 3+4",
-      "Seminarios 6+7 (Almacén)"
+      "Todas las Salas",
+      "Hotel Saray - Sala 1",
+      "Poster Area (Exposición)",
+      "Andalucía I (Speaker Ready Room)",
+      "Hall Principal / Registro",
+      "Sala U1",
+      "Salas Z2 & Z4",
+      "Seminarios 1+2 (Sala Oración)",
+      "Seminarios 6+7 (Almacén)",
+      "Muelle de Carga / Salida",
+      "Sede Social / Exterior (Granada)"
     ],
     "days": [
       {
@@ -118,7 +120,8 @@
               }
             ],
             "tech_requirements": "Setup: Banquet (50 pax)",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-044",
@@ -142,7 +145,8 @@
               }
             ],
             "is_operational": true,
-            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf"
+            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-001",
@@ -166,7 +170,8 @@
               }
             ],
             "is_operational": true,
-            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf"
+            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
+            "venue": "palacio"
           },
           {
             "id": "ops-002",
@@ -191,7 +196,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]"
+            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]",
+            "venue": "eposter"
           },
           {
             "id": "hw-mtg-015",
@@ -215,7 +221,8 @@
               }
             ],
             "tech_requirements": "VLAN 10Mbit + 2 Laptops + Screens + Printer",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-053",
@@ -240,7 +247,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Almacén de organización y material técnico"
+            "tech_requirements": "Almacén de organización y material técnico",
+            "venue": "comites"
           },
           {
             "id": "ieee-sess-071",
@@ -346,7 +354,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-074",
@@ -454,7 +463,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:30",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-070",
@@ -628,7 +638,8 @@
             ],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-072",
@@ -737,7 +748,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-073",
@@ -824,7 +836,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-052",
@@ -849,7 +862,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]"
+            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]",
+            "venue": "comites"
           },
           {
             "id": "pdf-grid-053",
@@ -863,7 +877,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-054",
@@ -939,7 +954,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-055",
@@ -1015,7 +1031,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-056",
@@ -1102,7 +1119,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-057",
@@ -1189,7 +1207,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-058",
@@ -1276,7 +1295,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-059",
@@ -1352,7 +1372,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-061",
@@ -1365,7 +1386,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-083",
@@ -1496,7 +1518,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-060",
@@ -1624,7 +1647,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-062",
@@ -1637,7 +1661,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-064",
@@ -1650,7 +1675,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-086",
@@ -1664,7 +1690,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-087",
@@ -1678,7 +1705,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]"
+            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]",
+            "venue": "eposter"
           },
           {
             "id": "ieee-sess-084",
@@ -1708,7 +1736,8 @@
             ],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 90 | Theatre / Banquet (WIE)]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 90 | Theatre / Banquet (WIE)]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-spec-100",
@@ -1735,7 +1764,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE (#special-events)",
             "room_operational_window": "08:30 - 19:30",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-063",
@@ -1749,7 +1779,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-089",
@@ -1772,7 +1803,8 @@
               }
             ],
             "web_enriched": true,
-            "source_tag": "Web IEEE + EventClass"
+            "source_tag": "Web IEEE + EventClass",
+            "venue": "exterior"
           },
           {
             "id": "pdf-grid-065",
@@ -1881,7 +1913,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-066",
@@ -1990,7 +2023,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-067",
@@ -2099,7 +2133,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-068",
@@ -2208,7 +2243,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-069",
@@ -2317,7 +2353,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-070",
@@ -2330,7 +2367,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-095",
@@ -2343,7 +2381,8 @@
             "sub_talks": [],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-071",
@@ -4102,7 +4141,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-072",
@@ -4115,7 +4155,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-098",
@@ -4142,7 +4183,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:30",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-073",
@@ -4155,7 +4197,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-052",
@@ -4168,7 +4211,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           }
         ]
       },
@@ -4198,7 +4242,8 @@
               }
             ],
             "tech_requirements": "Setup: Banquet (50 pax)",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-054",
@@ -4222,7 +4267,8 @@
               }
             ],
             "is_operational": true,
-            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf"
+            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-003",
@@ -4246,7 +4292,8 @@
               }
             ],
             "is_operational": true,
-            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf"
+            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
+            "venue": "palacio"
           },
           {
             "id": "ops-004",
@@ -4271,7 +4318,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]"
+            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]",
+            "venue": "eposter"
           },
           {
             "id": "hw-mtg-017",
@@ -4295,7 +4343,8 @@
               }
             ],
             "tech_requirements": "VLAN 10Mbit + 2 Laptops + Screens + Printer",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-063",
@@ -4320,7 +4369,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Almacén de organización y material técnico"
+            "tech_requirements": "Almacén de organización y material técnico",
+            "venue": "comites"
           },
           {
             "id": "ops-056",
@@ -4345,7 +4395,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]",
+            "venue": "palacio"
           },
           {
             "id": "ops-060",
@@ -4370,7 +4421,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-058",
@@ -4395,7 +4447,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-059",
@@ -4420,7 +4473,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-061",
@@ -4445,7 +4499,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]"
+            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]",
+            "venue": "eposter"
           },
           {
             "id": "ieee-sess-102",
@@ -4553,7 +4608,8 @@
             ],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-103",
@@ -4661,7 +4717,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "hw-mtg-018",
@@ -4685,7 +4742,8 @@
               }
             ],
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "palacio"
           },
           {
             "id": "ops-062",
@@ -4710,7 +4768,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]"
+            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]",
+            "venue": "comites"
           },
           {
             "id": "pdf-grid-075",
@@ -4724,7 +4783,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-076",
@@ -4800,7 +4860,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-077",
@@ -4875,7 +4936,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-079",
@@ -4888,7 +4950,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-080",
@@ -4901,7 +4964,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-108",
@@ -5031,7 +5095,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "hw-mtg-019",
@@ -5055,7 +5120,8 @@
               }
             ],
             "tech_requirements": "1 Lavalier Mic + 2 Hand Held WiFi Mics + 1 Stand Mic + Screen + Projector",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-078",
@@ -5186,7 +5252,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-081",
@@ -6923,7 +6990,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-082",
@@ -6937,7 +7005,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-083",
@@ -7024,7 +7093,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-084",
@@ -7111,7 +7181,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-085",
@@ -7124,7 +7195,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-114",
@@ -7147,7 +7219,8 @@
               }
             ],
             "web_enriched": true,
-            "source_tag": "Web IEEE + EventClass"
+            "source_tag": "Web IEEE + EventClass",
+            "venue": "exterior"
           },
           {
             "id": "pdf-grid-074",
@@ -7160,7 +7233,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           }
         ]
       },
@@ -7190,7 +7264,8 @@
               }
             ],
             "is_operational": true,
-            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf"
+            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
+            "venue": "comites"
           },
           {
             "id": "hw-mtg-001",
@@ -7214,7 +7289,8 @@
               }
             ],
             "tech_requirements": "VLAN 10Mbit + 2 Laptops + Screens + Printer",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-005",
@@ -7238,7 +7314,8 @@
               }
             ],
             "is_operational": true,
-            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf"
+            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
+            "venue": "palacio"
           },
           {
             "id": "ops-007",
@@ -7263,7 +7340,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]"
+            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]",
+            "venue": "comites"
           },
           {
             "id": "ops-008",
@@ -7288,7 +7366,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Almacén de organización y material técnico"
+            "tech_requirements": "Almacén de organización y material técnico",
+            "venue": "comites"
           },
           {
             "id": "hw-mtg-020",
@@ -7312,7 +7391,8 @@
               }
             ],
             "tech_requirements": "VLAN 10Mbit + 2 Laptops + Screens + Printer",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-072",
@@ -7337,7 +7417,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Almacén de organización y material técnico"
+            "tech_requirements": "Almacén de organización y material técnico",
+            "venue": "comites"
           },
           {
             "id": "ops-066",
@@ -7362,7 +7443,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]",
+            "venue": "palacio"
           },
           {
             "id": "ops-070",
@@ -7387,7 +7469,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-068",
@@ -7412,7 +7495,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-069",
@@ -7437,7 +7521,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "hw-mtg-021",
@@ -7461,7 +7546,8 @@
               }
             ],
             "tech_requirements": "Lavalier Mic + 2 Hand Held WiFi + 1 Stand Mic + Screen + Projector [U-Shape 30]",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-001",
@@ -7552,7 +7638,8 @@
             ],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 185 | Theatre (Salón Alhamar)]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 185 | Theatre (Salón Alhamar)]",
+            "venue": "hotel"
           },
           {
             "id": "ieee-sess-115",
@@ -7657,7 +7744,8 @@
             ],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-116",
@@ -7766,7 +7854,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-071",
@@ -7791,7 +7880,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]"
+            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]",
+            "venue": "comites"
           },
           {
             "id": "pdf-grid-087",
@@ -7805,7 +7895,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:30",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-088",
@@ -7881,7 +7972,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:30",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-089",
@@ -7957,7 +8049,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:30",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-091",
@@ -7970,7 +8063,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:30"
+            "room_operational_window": "08:30 - 19:30",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-092",
@@ -7983,7 +8077,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:30"
+            "room_operational_window": "08:30 - 19:30",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-090",
@@ -7997,7 +8092,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:30",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-122",
@@ -8021,7 +8117,8 @@
             ],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "room_operational_window": "08:00 - 19:00"
+            "room_operational_window": "08:00 - 19:00",
+            "venue": "comites"
           },
           {
             "id": "pdf-grid-093",
@@ -8225,7 +8322,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:30",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-094",
@@ -8466,7 +8564,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:30",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-001",
@@ -8478,7 +8577,8 @@
             "moderators": [],
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-086",
@@ -8491,7 +8591,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:30"
+            "room_operational_window": "08:30 - 19:30",
+            "venue": "palacio"
           }
         ]
       },
@@ -8521,7 +8622,8 @@
               }
             ],
             "tech_requirements": "VLAN 10Mbit + 2 Laptops + Screens + Printer",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-013",
@@ -8546,7 +8648,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Almacén de organización y material técnico"
+            "tech_requirements": "Almacén de organización y material técnico",
+            "venue": "comites"
           },
           {
             "id": "ieee-sess-003",
@@ -8590,7 +8693,8 @@
             ],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 185 | Theatre (Salón Alhamar)]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 185 | Theatre (Salón Alhamar)]",
+            "venue": "hotel"
           },
           {
             "id": "ops-012",
@@ -8615,7 +8719,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]"
+            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]",
+            "venue": "comites"
           },
           {
             "id": "ops-011",
@@ -8640,7 +8745,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-003",
@@ -8748,7 +8854,8 @@
             ],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "ops-010",
@@ -8773,7 +8880,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-004",
@@ -9086,7 +9194,8 @@
             ],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-005",
@@ -9098,7 +9207,8 @@
             "moderators": [],
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-007",
@@ -9122,7 +9232,8 @@
             ],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "room_operational_window": "07:30 - 19:30"
+            "room_operational_window": "07:30 - 19:30",
+            "venue": "comites"
           },
           {
             "id": "hw-mtg-003",
@@ -9146,7 +9257,8 @@
               }
             ],
             "tech_requirements": "Screen + Projector [Setup: Boardroom]",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "pdf-grid-002",
@@ -9158,7 +9270,8 @@
             "moderators": [],
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
+            "venue": "palacio"
           }
         ]
       },
@@ -9188,7 +9301,8 @@
               }
             ],
             "tech_requirements": "Setup: Banquet (50 pax)",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-014",
@@ -9212,7 +9326,8 @@
               }
             ],
             "is_operational": true,
-            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf"
+            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
+            "venue": "comites"
           },
           {
             "id": "hw-mtg-005",
@@ -9236,7 +9351,8 @@
               }
             ],
             "tech_requirements": "VLAN 10Mbit + 2 Laptops + Screens + Printer",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-023",
@@ -9261,7 +9377,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Almacén de organización y material técnico"
+            "tech_requirements": "Almacén de organización y material técnico",
+            "venue": "comites"
           },
           {
             "id": "ops-018",
@@ -9286,7 +9403,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-017",
@@ -9311,7 +9429,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-019",
@@ -9336,7 +9455,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-021",
@@ -9361,7 +9481,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]"
+            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]",
+            "venue": "eposter"
           },
           {
             "id": "ieee-sess-008",
@@ -9436,7 +9557,8 @@
             ],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-009",
@@ -9480,7 +9602,8 @@
             ],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 185 | Theatre (Salón Alhamar)]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 185 | Theatre (Salón Alhamar)]",
+            "venue": "hotel"
           },
           {
             "id": "ops-022",
@@ -9505,7 +9628,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]"
+            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]",
+            "venue": "comites"
           },
           {
             "id": "pdf-grid-007",
@@ -9519,7 +9643,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-008",
@@ -9573,7 +9698,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-014",
@@ -9757,7 +9883,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-009",
@@ -9932,7 +10059,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-010",
@@ -9945,7 +10073,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-011",
@@ -9958,7 +10087,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-015",
@@ -9971,7 +10101,8 @@
             "sub_talks": [],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-017",
@@ -10080,7 +10211,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:30",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-012",
@@ -11899,7 +12031,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-013",
@@ -11913,7 +12046,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-014",
@@ -12000,7 +12134,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-015",
@@ -12083,7 +12218,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-016",
@@ -12170,7 +12306,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-017",
@@ -12246,7 +12383,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "hw-mtg-006",
@@ -12270,7 +12408,8 @@
               }
             ],
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-018",
@@ -12283,7 +12422,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-023",
@@ -12306,7 +12446,8 @@
               }
             ],
             "web_enriched": true,
-            "source_tag": "Web IEEE + EventClass"
+            "source_tag": "Web IEEE + EventClass",
+            "venue": "exterior"
           },
           {
             "id": "pdf-grid-006",
@@ -12319,7 +12460,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           }
         ]
       },
@@ -12349,7 +12491,8 @@
               }
             ],
             "tech_requirements": "Setup: Banquet (50 pax)",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-024",
@@ -12373,7 +12516,8 @@
               }
             ],
             "is_operational": true,
-            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf"
+            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
+            "venue": "comites"
           },
           {
             "id": "hw-mtg-008",
@@ -12397,7 +12541,8 @@
               }
             ],
             "tech_requirements": "VLAN 10Mbit + 2 Laptops + Screens + Printer",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-033",
@@ -12422,7 +12567,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Almacén de organización y material técnico"
+            "tech_requirements": "Almacén de organización y material técnico",
+            "venue": "comites"
           },
           {
             "id": "ops-028",
@@ -12447,7 +12593,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-027",
@@ -12472,7 +12619,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-031",
@@ -12497,7 +12645,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]"
+            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]",
+            "venue": "eposter"
           },
           {
             "id": "ieee-sess-025",
@@ -12606,7 +12755,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-027",
@@ -12715,7 +12865,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:30",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-024",
@@ -12823,7 +12974,8 @@
             ],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-028",
@@ -12980,7 +13132,8 @@
             ],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 185 | Theatre (Salón Alhamar)]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 185 | Theatre (Salón Alhamar)]",
+            "venue": "hotel"
           },
           {
             "id": "ieee-sess-026",
@@ -13089,7 +13242,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-032",
@@ -13114,7 +13268,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]"
+            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]",
+            "venue": "comites"
           },
           {
             "id": "pdf-grid-020",
@@ -13128,7 +13283,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-021",
@@ -13215,7 +13371,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-022",
@@ -13228,7 +13385,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "hw-mtg-009",
@@ -13252,7 +13410,8 @@
               }
             ],
             "tech_requirements": "Screen + Projector [Setup: Boardroom]",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ieee-sess-032",
@@ -13265,7 +13424,8 @@
             "sub_talks": [],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-023",
@@ -13385,7 +13545,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-024",
@@ -13978,7 +14139,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "hw-mtg-010",
@@ -14002,7 +14164,8 @@
               }
             ],
             "tech_requirements": "Screen + Projector [Setup: Boardroom]",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "pdf-grid-025",
@@ -14089,7 +14252,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-026",
@@ -14176,7 +14340,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-019",
@@ -14189,7 +14354,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           }
         ]
       },
@@ -14219,7 +14385,8 @@
               }
             ],
             "tech_requirements": "Setup: Banquet (50 pax)",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-034",
@@ -14243,7 +14410,8 @@
               }
             ],
             "is_operational": true,
-            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf"
+            "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
+            "venue": "comites"
           },
           {
             "id": "hw-mtg-012",
@@ -14267,7 +14435,8 @@
               }
             ],
             "tech_requirements": "VLAN 10Mbit + 2 Laptops + Screens + Printer",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "comites"
           },
           {
             "id": "ops-043",
@@ -14292,7 +14461,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Almacén de organización y material técnico"
+            "tech_requirements": "Almacén de organización y material técnico",
+            "venue": "comites"
           },
           {
             "id": "ops-041",
@@ -14317,7 +14487,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]"
+            "tech_requirements": "Iluminación de stands, paneles de pósters y puntos de café [Aforo: 500 | Exhibition & Poster Boards + 5 Coffee Break Points]",
+            "venue": "eposter"
           },
           {
             "id": "ieee-sess-038",
@@ -14404,7 +14575,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-042",
@@ -14502,7 +14674,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:30",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-040",
@@ -14698,7 +14871,8 @@
             ],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-039",
@@ -14785,7 +14959,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-041",
@@ -14891,7 +15066,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "ops-042",
@@ -14916,7 +15092,8 @@
             ],
             "is_operational": true,
             "source_tag": "FERROVIAL CONGRESO IEEE V1.pdf",
-            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]"
+            "tech_requirements": "Acondicionamiento básico sin AV [Aforo: 30 | Prayer Room]",
+            "venue": "comites"
           },
           {
             "id": "ieee-sess-043",
@@ -15088,7 +15265,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-028",
@@ -15101,7 +15279,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-029",
@@ -15114,7 +15293,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-044",
@@ -15289,7 +15469,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 250 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-030",
@@ -15303,7 +15484,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-049",
@@ -15390,7 +15572,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:30",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 350 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-031",
@@ -15465,7 +15648,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-032",
@@ -15541,7 +15725,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-033",
@@ -17343,7 +17528,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-034",
@@ -17424,7 +17610,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-036",
@@ -17437,7 +17624,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-035",
@@ -17567,7 +17755,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-037",
@@ -17580,7 +17769,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-052",
@@ -17711,7 +17901,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 530 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "hw-mtg-013",
@@ -17735,7 +17926,8 @@
               }
             ],
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector",
-            "source_tag": "2026 Conference Layout_hardware_requirements.pdf"
+            "source_tag": "2026 Conference Layout_hardware_requirements.pdf",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-055",
@@ -17766,7 +17958,8 @@
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
             "room_operational_window": "08:30 - 19:00",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 382 | Theatre (191+191) / Banquet]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-038",
@@ -17779,7 +17972,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-039",
@@ -17888,7 +18082,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-040",
@@ -17997,7 +18192,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-041",
@@ -18106,7 +18302,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-042",
@@ -18190,7 +18387,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-043",
@@ -18298,7 +18496,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-044",
@@ -18396,7 +18595,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-045",
@@ -18499,7 +18699,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-046",
@@ -18512,7 +18713,8 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           },
           {
             "id": "ieee-sess-063",
@@ -18525,7 +18727,8 @@
             "sub_talks": [],
             "web_enriched": true,
             "source_tag": "Web IEEE + EventClass",
-            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]"
+            "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-047",
@@ -20262,7 +20465,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-048",
@@ -20345,7 +20549,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-049",
@@ -20432,7 +20637,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-050",
@@ -20518,7 +20724,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-051",
@@ -20594,7 +20801,8 @@
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
             "room_operational_window": "08:30 - 19:00",
-            "web_enriched": true
+            "web_enriched": true,
+            "venue": "palacio"
           },
           {
             "id": "pdf-grid-027",
@@ -20607,15 +20815,14 @@
             "sub_talks": [],
             "source_tag": "tentativeProgram.pdf",
             "tech_requirements": "1 Lavalier Mic (Ponente) + 2 Hand Held WiFi Mics (Chairs) + 1 Stand Mic + Screen + Projector [Aforo: 2000 | Theatre]",
-            "room_operational_window": "08:30 - 19:00"
+            "room_operational_window": "08:30 - 19:00",
+            "venue": "palacio"
           }
         ]
       },
       {
         "date": "2026-11-12",
         "label": "Jueves",
-        "is_special": true,
-        "special_type": "desmontaje",
         "sessions": [
           {
             "id": "desmontaje-2026-11-12-01",
@@ -20645,7 +20852,8 @@
                 "affiliation": "Montaje / Logística",
                 "tech_requirements": "Precintado de cajas"
               }
-            ]
+            ],
+            "venue": "palacio"
           },
           {
             "id": "desmontaje-2026-11-12-02",
@@ -20666,15 +20874,16 @@
                 "affiliation": "Logística AV",
                 "tech_requirements": "Firma con Palacio/Sede"
               }
-            ]
+            ],
+            "venue": "exterior"
           }
-        ]
+        ],
+        "is_special": true,
+        "special_type": "desmontaje"
       },
       {
         "date": "2026-11-13",
         "label": "Viernes",
-        "is_special": true,
-        "special_type": "desmontaje",
         "sessions": [
           {
             "id": "desmontaje-2026-11-13-01",
@@ -20704,7 +20913,8 @@
                 "affiliation": "Montaje / Logística",
                 "tech_requirements": "Precintado de cajas"
               }
-            ]
+            ],
+            "venue": "palacio"
           },
           {
             "id": "desmontaje-2026-11-13-02",
@@ -20725,15 +20935,16 @@
                 "affiliation": "Logística AV",
                 "tech_requirements": "Firma con Palacio/Sede"
               }
-            ]
+            ],
+            "venue": "exterior"
           }
-        ]
+        ],
+        "is_special": true,
+        "special_type": "desmontaje"
       },
       {
         "date": "2026-11-14",
         "label": "Sábado",
-        "is_special": true,
-        "special_type": "desmontaje",
         "sessions": [
           {
             "id": "desmontaje-2026-11-14-01",
@@ -20763,7 +20974,8 @@
                 "affiliation": "Montaje / Logística",
                 "tech_requirements": "Precintado de cajas"
               }
-            ]
+            ],
+            "venue": "palacio"
           },
           {
             "id": "desmontaje-2026-11-14-02",
@@ -20784,9 +20996,12 @@
                 "affiliation": "Logística AV",
                 "tech_requirements": "Firma con Palacio/Sede"
               }
-            ]
+            ],
+            "venue": "exterior"
           }
-        ]
+        ],
+        "is_special": true,
+        "special_type": "desmontaje"
       }
     ],
     "dates": {
@@ -20912,6 +21127,28 @@
         "label": "Cuadrante Operativo de Salas y Montaje",
         "badge": "🏗️ Operativa & Montaje"
       }
-    ]
+    ],
+    "room_venues": {
+      "Muelle de Carga / Salida": "exterior",
+      "Sala U1": "comites",
+      "Seminarios 3+4": "palacio",
+      "Salas Z2 & Z4": "comites",
+      "Hall Principal / Registro": "comites",
+      "Todas las Salas": "palacio",
+      "Andalucía II & III": "palacio",
+      "Seminarios 1+2 (Sala Oración)": "comites",
+      "Sala Z1": "palacio",
+      "Hotel Saray - Sala 1": "hotel",
+      "Andalucía I (Speaker Ready Room)": "comites",
+      "Machado": "palacio",
+      "Federico García Lorca": "palacio",
+      "Sede Social / Exterior (Granada)": "exterior",
+      "Poster Area (Exposición)": "eposter",
+      "Manuel de Falla": "palacio",
+      "Albéniz & Machuca": "palacio",
+      "Palacio de Congresos (General / Montaje)": "palacio",
+      "Picasso": "palacio",
+      "Seminarios 6+7 (Almacén)": "comites"
+    }
   }
 }
